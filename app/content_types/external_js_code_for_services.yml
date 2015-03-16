@@ -1,0 +1,36 @@
+---
+name: External js Code for services
+description: A description of the content type for the editors
+slug: external_js_code_for_services
+label_field_name: title
+order_by: manually
+order_direction: asc
+fields:
+- title:
+    label: Title
+    type: string
+    hint: Explanatory text displayed in the back office
+    required: true
+    unique: false
+    localized: false
+- codice_prima_header:
+    label: Codice prima </header>
+    type: text
+    hint: Explanatory text displayed in the back office
+    required: false
+    unique: false
+    localized: false
+- body:
+    label: Codice dopo <body>
+    type: text
+    hint: Explanatory text displayed in the back office
+    required: false
+    unique: false
+    localized: false
+- codice_prima_body:
+    label: Codice prima </body>
+    type: string
+    hint: Explanatory text displayed in the back office
+    required: false
+    unique: false
+    localized: false

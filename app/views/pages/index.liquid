@@ -1,0 +1,358 @@
+---
+title: Pagina home
+is_layout: false
+listed: false
+published: true
+cache_strategy: none
+response_type: text/html
+position: 0
+---
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ site.name }}</title>
+    {{ 'application.css' | stylesheet_tag }}
+    {{ 'vendor/modernizr.min.js' | javascript_tag }}
+    {% inline_editor %}
+  </head>
+  <body>
+    {% block 'main' %}
+        <div class="row">
+            <div class="large-12 columns">
+               <nav class="top-bar" data-topbar>
+                    <ul class="title-area">
+                        <li class="name">
+                            <h1><a href="#">Top Bar Title</a></h1>
+                        </li>
+                        <li class="toggle-topbar menu-icon">
+                            <a href="#"><span>menu</span></a>
+                        </li>
+                    </ul>
+                    <section class="top-bar-section">
+                        <ul class="left">
+                            <li>
+                                <a href="#">Link 1</a>
+                            </li>
+                            <li>
+                                <a href="#">Link 2</a>
+                            </li>
+                        </ul>
+                    </section>
+               </nav>
+            </div>
+         </div>
+         <div class="row">
+            <div class="large-12 columns">
+               <div class="hide-for-small">
+                  <div id="featured"><img alt="slide image" src="http://placehold.it/1200x400&text=Slide Image"></div>
+               </div>
+               <div class="row">
+                  <div class="small-12 show-for-small"><br>
+                     <img src="http://placehold.it/1000x600&amp;text=For%20Small%20Screens">
+                  </div>
+               </div>
+            </div>
+         </div>
+         <br>
+
+        <div class="row">
+            <div class="large-12 columns">
+                <h2 class="subheader">Come lavoriamo:</h2>
+                <hr>
+                    <ul class="large-block-grid-2">
+                        <li>
+                            <div class="large-12 columns">
+                                <h3>Vendite, non esiste altro obiettivo!</h3>
+                                <hr>
+                                    <p>
+                                        Le aziende per cui lavoriamo hanno sempre un solo obiettivo: <strong>VENDERE</strong>.
+                                    </p>
+                                    <p>
+                                        Può trattarsi di prodotti o di servizi, il concetto non cambia. Una qualsiasi campagna pubblicitaria ha, come ultimo obiettivo, un aumento delle vendite!
+                                    </p>
+                                    <p>
+                                        La vendita diretta (e-commerce) o mediata da un contatto (lead generation) è sempre l'unico obiettivo dell nostre campagne.
+                                        Misuriamo il successo del nostro lavoro basandoci su due numeri (KPI):
+                                        <ol>
+                                            <li>
+                                                <strong>Fatturato</strong> - Quanto ho fatturato a seguito di questa campagna di web marketing?</strong>
+                                            </li>
+                                            <li>
+                                                <strong>Costo di acquisizione</strong> - Quanto mi è costato ogni singolo ordine?
+                                            </li>
+                                        </ol>
+                                    </p>
+                                    <p>
+                                        <h4>
+                                            <i>
+                                                Non ha senso parlare di engagement, contare i fans su Facebook o le visite ad un sito se nessuno compra quello che avete da vendere!
+                                            </i>
+                                        </h4>
+                                    </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="large-12 columns">
+                                <h3>Le persone! La guida!</h3>
+                                <hr>
+                                    <p>
+                                        <i>Come strutturo il mio sito web? Mi serve un sito di commercio elettronico? Basta una campagna di lead generation?
+                                        Devo esserci su FaceBook? Google+, Pinterest... ma devo essere ovunque?</i>
+                                    </p>
+                                    <p>
+                                        La domanda da farsi è: <strong>dove sono i miei clienti</strong>? Ma prima ancora: <strong>Chi sono i miei clienti?</strong>
+                                    </p>
+                                    <p>
+                                        Conoscere i bisogni, le aspettative, il linguaggio delle persone a cui vi rivolgete. Tutto deve parlare a loro. Dategli un nome,un volto immaginateli sul vostro sito,
+                                        chiedetevi se il sito risponde a loro, serve a loro risolve i loro dubbi.
+                                    </p>
+                                    <p>
+                                        Conoscendo le persone a cui parlate saprete cosa dirgli, come dirlo, su che canali dirlo. Saprete dove sono, cosa fanno di cosa parlano ecc...
+                                    </p>
+                                    <p>
+                                        <h4>
+                                            <i>
+                                                Parlare la lingua dei vostri clienti spiegando a loro, nei luoghi che frequentano, perchè il vostro prodotto è la soluzione ai loro problemi!
+                                            </i>
+                                        </h4>
+                                    </p>
+                            </div>
+
+                        </li>
+                        <li>
+                                <div class="large-12 columns">
+                                    <h3>I numeri! Il supporto alle decisioni</h3>
+                                    <p>
+                                        <i>Quale immagine è meglio scegliere? Quale banner è il migliore? Conviene spendere soldi su Facebook?
+                                        Ogni scelta, ogni ipotesi deve essere supportata o verificata dai numeri.</i>
+                                    </p>
+                                    <p>
+                                        <strong>Misurare</strong> è la parola d'ordine.
+                                        Se una campagna pubblicitaria non è misurabile, non la facciamo, non la concepiamo neanche!
+                                    </p>
+                                    <p>
+                                        Tutti portano dei numeri a supporto delle loro campagne. <strong>In pochi vi dicono quanto fatturato hanno generato le loro campagne</strong>
+                                        Occorre dare i giusti numeri!
+                                    </p>
+                                    <p>
+                                        4.000.000 di fans su Facebook sono molti? E' un successo avere 500.000 commenti ad un post? in termini assoluti si... sono numeri importanti ma la domanda da farsi è:
+                                        Quanto fatturo al mese grazie ai 4.000.000 di fans e quanto mi costano?
+                                    </p>
+                                    <p>
+                                        <h4>
+                                            <i>
+                                                Guardiamo ai numeri che contano! Quanti ordini avete ricevuto grazie alle nostre campagne e quanto vi sono costate. Questo è quello che vi diremo sempre!
+                                            </i>
+                                        </h4>
+                                    </p>
+                                </div>
+
+                        </li>
+                        <li>
+                                <div class="large-12 columns">
+                                    <h3>SEO, SEM, Social Network... Perché?</h3>
+
+                                    <p>
+                                        <i>Vi occupate di SEO? Gestie campagne di Serach Engine Marketing (SEM)? Fate siti di commercio elettronico? Mi serve solo una landing page, le fate?
+                                        Vorrei una campagna di Social Media Marketing, voi ve ne occupate?</i>
+                                    </p>
+                                    <p>
+                                        Non c'è agenzia al mondo oggi che non faccia queste cose. <strong>Non c'è agenzia al mondo che non risponderà SI a tutte queste domande</strong>!
+                                    </p>
+
+                                    <p>
+                                        <strong>Nessuno vi dirà mai che per voi è inutile mettere in piedi un sito di commercio elettronico oggi. Nessuno vi dirà mai che una campagna SEM nel vostro settore è solo un bagno di sangue.</strong>
+                                        Nessuno vi dirà mai che senza i giusti contenuti è inutile che pensiate ad una presenza su Facebook. <strong>Nessuno vi dirà mai che quello che gli chiedete di fare è solo una perdita di tempo!</strong>
+                                    </p>
+
+                                    <p>
+                                        Il nostro obiettivo è farvi fatturare spendendo il meno possibile. Per questo noi vi diremo di non buttare soldi in inutili campagne, vi sconsiglieremo di buttarvi in imprese che non vi porteranno a nulla.
+                                    </p>
+                                    <p>
+                                        <h4>
+                                            <i>
+                                                Vi sconsiglieremo di fare il lavoro che ci chiedete di fare. Vi diremo dei no... perchè quello che ci sta a cuore è il successo delle nostre attività, non i soldi che ci date per farle!
+                                            </i>
+                                        </h4>
+                                    </p>
+                                </div>
+
+                        </li>
+                        <li>
+                            <div class="large-12 columns">
+                                <h3>MVP! Minimum viable product</h3>
+                                <p>
+                                    <i>Compreranno il mio prodotto? Riuscirò a vendere questo servizio? Qualcuno sarà mai interessato a quello che faccio? Non resta che provare, subito, adesso, senza perdere tempo.
+                                    Se hai un'idea, la prima cosa da verificare è sen funziona.</i>
+                                </p>
+                                <p>
+                                    Il web permette di mettere subito alla prova un'idea di prodotto o servizio. Con pochi euro è possibile mettere alla prova le proprie ipotesi!
+                                </p>
+
+                                <p>
+                                    Non vi diremo mai che vi serve un'astronave quando vi basta una bicicletta per verificare se la vostra idea di business ha senso.
+                                    Ci interessa i vostro successo, non il fatturato di un sito web!
+                                </p>
+                                <p>
+                                    <h4>
+                                        <i>
+                                            Vi porteremo sempre a compiere il minimo passo indispensabile per migliorare i vostri risultati. Non serve correre, basta avere un buon passo!
+                                        </i>
+                                    </h4>
+                                </p>
+                            </div>
+
+                        </li>
+                        <li>
+                            <div class="large-12 columns">
+                                <h3>Ipotesi, Realizzazione, Misurazione!</h3>
+                                <p>
+                                    Insieme ai nostri clienti, formuliamo delle ipotesi, facciamo delle previsioni e prepariamo una strategia.
+                                    <strong>Lavoriamo per mettere subito alla prova quanto ipotizzato, felici di essere smentiti e di dover ricominciare!</strong>
+                                </p>
+
+                                <p>
+                                    Se un'idea si dimostra errata, ci fermiamo senza inutili sprechi di risorse. Se na idea ha successo, ci lavoriamo affinandola sempre si più.
+                                    Siamo rapidi, veloci e pronti a cambiare. Sono i numeri a darci ragione o a darci torto, nessun orgoglio e nessuna presunzione!
+                                </p>
+                                <p>
+                                    Dividamo il lavoro in cicli mensili o bimestrali. In questo modo abbiamo la possibilità di agire subito quando le ipotesi si dimostrano errate senza inutili sprechi di risorse.
+                                </p>
+                                <p>
+                                    <h4>
+                                        <i>Ipotesi, Realizzazione, Misurazione e ancora Ipotesi
+                                            Nessuno spreco di risorese!
+                                        </i>
+                                    </h4>
+                                </p>
+                            </div>
+
+                        </li>
+                    </ul>
+            </div>
+        </div>
+
+
+
+        <div class="row">
+            <div class="large-12 columns">
+                <h2 class="panel">Cosa facciamo:</h3>
+                    <ul class="large-block-grid-1">
+                        <li>
+                            <div class="large-12 columns">
+                                <h3>Studio Preliminare o di Fattibilità</h3>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="large-12 columns">
+                                <h3>Periodo di test iniziale -  MVP</h3>
+                            </div>
+
+                        </li>
+                        <li>
+                            <div class="large-12 columns">
+                                <h3>Messa a regime -  Ottimizzazione delle conversioni (CRO)</h3>
+                            </div>
+
+                        </li>
+                    </ul>
+            </div>
+        </div>
+
+
+         <div class="row">
+            <div class="large-12 columns">
+               <div class="row">
+                  <div class="large-8 columns">
+                     <div class="panel radius">
+                        <div class="row">
+                           <div class="large-6 small-6 columns">
+                              <h4>Header</h4>
+                              <hr>
+                              <h5 class="subheader">Risus ligula, aliquam nec fermentum vitae, sollicitudin eget urna. Donec
+                                 dignissim nibh fermentum odio ornare sagittis.
+                              </h5>
+                              <div class="show-for-small" style="text-align: center">
+                                 <a class="small radius button" href="#">Call To Action!</a><br>
+                                 <a class="small radius button" href="#">Call To Action!</a>
+                              </div>
+                           </div>
+                           <div class="large-6 small-6 columns">
+                              <p>Suspendisse ultrices ornare tempor. Aenean eget ultricies libero. Phasellus non ipsum eros. Vivamus
+                                 at dignissim massa. Aenean dolor libero, blandit quis interdum et, malesuada nec ligula. Nullam erat
+                                 erat, eleifend sed pulvinar ac. Suspendisse ultrices ornare tempor. Aenean eget ultricies libero.
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="large-4 columns hide-for-small">
+                     <h4>Get In Touch!</h4>
+                     <hr>
+                     <a href="#">
+                        <div class="panel radius callout" style="text-align: center">
+                           <strong>Call To Action!</strong>
+                        </div>
+                     </a>
+                     <a href="#">
+                        <div class="panel radius callout" style="text-align: center">
+                           <strong>Call To Action!</strong>
+                        </div>
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <footer class="row">
+            <div class="large-12 columns">
+               <hr>
+               <div class="row">
+                  <div class="large-6 columns">
+                     <p>© Copyright no one at all. Go to town.</p>
+                  </div>
+                  <div class="large-6 columns">
+                     <ul class="inline-list right">
+                        <li>
+                           <a href="#">Link 1</a>
+                        </li>
+                        <li>
+                           <a href="#">Link 2</a>
+                        </li>
+                        <li>
+                           <a href="#">Link 3</a>
+                        </li>
+                        <li>
+                           <a href="#">Link 4</a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </footer>
+    {% endblock %}
+    {{ 'vendor/jquery.min.js' | javascript_tag }}
+    {{ 'foundation.min.js' | javascript_tag }}
+    <!--
+    {{ 'foundation.abide.js' | javascript_tag }}
+    {{ 'foundation.accordion.js' | javascript_tag }}
+    {{ 'foundation.alert.js' | javascript_tag }}
+    {{ 'foundation.clearing.js' | javascript_tag }}
+    {{ 'foundation.dropdown.js' | javascript_tag }}
+    {{ 'foundation.interchange.js' | javascript_tag }}
+    {{ 'foundation.joyride.js' | javascript_tag }}
+    {{ 'foundation.js' | javascript_tag }}
+    {{ 'foundation.magellan.js' | javascript_tag }}
+    {{ 'foundation.offcanvas.js' | javascript_tag }}
+    {{ 'foundation.orbit.js' | javascript_tag }}
+    {{ 'foundation.reveal.js' | javascript_tag }}
+    {{ 'foundation.tab.js' | javascript_tag }}
+    {{ 'foundation.tooltip.js' | javascript_tag }}
+    {{ 'foundation.topbar.js' | javascript_tag }}
+    -->
+    <script>
+    $(document).foundation();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,9 @@
+---
+name: FucinaDelTag
+locales: [it]
+subdomain: fucinadeltag
+domains: [fucinadeltag.locomotivehosting.com]
+seo_title: FucinaDelTag
+meta_keywords: some meta keywords
+meta_description: some meta description
+timezone: Rome
