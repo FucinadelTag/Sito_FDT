@@ -15,6 +15,9 @@ position: 0
     <title>{{ site.name }}</title>
     {{ 'application.css' | stylesheet_tag }}
     {{ 'vendor/modernizr.min.js' | javascript_tag }}
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
     {% inline_editor %}
   </head>
   <body>
@@ -24,62 +27,70 @@ position: 0
                <nav class="top-bar" data-topbar>
                     <ul class="title-area">
                         <li class="name">
-                            <h1><a href="#">Fucina del Tag</a></h1>
+                            <h1><a href="/"> <img src="/images/logo_fucinadeltag_trasparente.png"></a></h1>
                         </li>
                         <li class="toggle-topbar menu-icon">
-                            <a href="#"><span>menu</span></a>
+                            <a href="/"><span>menu</span></a>
                         </li>
                     </ul>
                     <section class="top-bar-section">
                         <ul class="left">
+                            <li class="divider"></li>
                             <li>
                                 <a href="#titleCosaFacciamo">Cosa Facciamo</a>
                             </li>
+                            <li class="divider"></li>
                             <li>
                                 <a href="#titleIlMetodo">Il metodo</a>
                             </li>
+                            <li class="divider"></li>
                             <li>
                                 <a href="#titleNoCompromessi">I principi!</a>
                             </li>
-                            <li>
-                                <a href="#">I nostri lavori</a>
+                            <li class="divider"></li>
+                            {% comment %}<li>
+                                <a href="#lavori">I nostri lavori</a>
                             </li>
+                            <li class="divider"></li>{% endcomment %}
                             <li>
-                                <a href="#">Chi siamo</a>
+                                <a href="#preventivi">Preventivi</a>
                             </li>
+                            <li class="divider"></li>
                         </ul>
                     </section>
                </nav>
             </div>
          </div>
          <div class="row">
-            <div class="large-12 columns">
-               <div class="hide-for-small">
-                  <div id="featured"><img alt="WEB marketing per vendere" src="http://placehold.it/1200x400/ffdd18/000000/&text=Web Marketing per Vendere!"></div>
-               </div>
-               <div class="row">
-                  <div class="small-12 show-for-small"><br>
-                     <img src="http://placehold.it/1000x600&amp;text=For%20Small%20Screens">
-                  </div>
-               </div>
+            <div class="small-12 columns">
+                <div>
+                    <ul data-orbit data-options="pause_on_hover:false;timer:true;timer_speed:5000;bullets:false;slide_number:false;navigation_arrows:true;">
+                        <li class="active">
+                            <img src="http://placehold.it/1200x400/FFFF00/000000&text=Web+Marketing+per+Vendere" title="slide 1" />
+                        </li>
+                        <li>
+                            <img src="http://placehold.it/1200x400/08E8DE/000000&text=Social+Media+Marketing" title="slide 2" />
+                        </li>
+                        <li>
+                            <img src="http://placehold.it/1200x400/00ff00/000000&text=SEO+e+Search+Engine+Marketing" title="slide 3" />
+                        </li>
+                    </ul>
+                </div>
+
             </div>
-         </div>
+        </div>
+
+
          <p/>
 
          <div class="row">
             <div class="small-12 columns" >
-            <h2 id="titleCosaFacciamo" class="subheader">Cosa facciamo</h2>
-            <p>
-                    <h5>
-                            Uniamo comptenze <strong>tecniche</strong> a competenze di <strong>Marketing e Comunicazione</strong> per essere veloci, pronti, agili!
-                            <br><i>Integriamo sapientemente tecnologia, marketing e comunicazione!</i>
-                    </h5>
-                </p>
+            <h3 id="titleCosaFacciamo" class="subheader">Cosa facciamo</h3>
             <hr>
                 <div class="row" data-equalizer="cosaFacciamo">
                     <div class="medium-6 columns">
-                        <div class="panel radius" data-equalizer-watch="cosaFacciamo">
-                            <h5>Strategie di Marketing - Studi fattibilità</h5>
+                        <div class="panel-yellow radius" data-equalizer-watch="cosaFacciamo">
+                            <h5><i class="fa fa-lightbulb-o"></i> Strategie di Marketing - Studi fattibilità</h5>
                             <hr>
                             <p class="small italic">Il mio prodotto è vendibile online? Come? quanto costa?
                             Cosa mi serve? Su quali media comunicare?</p>
@@ -89,8 +100,8 @@ position: 0
                         </div>
                     </div>
                     <div class="medium-6 columns" >
-                        <div class="panel radius"  data-equalizer-watch="cosaFacciamo">
-                            <h5>SEM - Search engine Marketing</h5>
+                        <div class="panel-yellow radius"  data-equalizer-watch="cosaFacciamo">
+                            <h5><i class="fa fa-bullseye"></i> SEM - Search engine Marketing</h5>
                             <hr>
                             <p class="small italic">
                                 Adwrords? Parole chiave? Rete ricerca, rete display? Quanto costa portare traffico al mio sito? Come intercettare le ricerche di chi vuole il mi prodotto?
@@ -104,8 +115,8 @@ position: 0
                 </div>
                 <div class="row" data-equalizer="cosaFacciamo">
                     <div class="medium-6 columns" >
-                        <div class="panel radius" data-equalizer-watch="cosaFacciamo">
-                            <h5>Display Advertising</h5>
+                        <div class="panel-yellow radius" data-equalizer-watch="cosaFacciamo">
+                            <h5><i class="fa fa-bullhorn"></i> Display Advertising</h5>
                             <hr>
                             <p class="small italic">
                                 Vorrei che i miei banner comparissero su alcuni siti, è possibile? Fate campagne banner? Quanto costano?
@@ -117,11 +128,11 @@ position: 0
                         </div>
                     </div>
                     <div class="medium-6 columns" >
-                        <div class="panel radius" data-equalizer-watch="cosaFacciamo">
-                            <h5>Seo - Search Engine Optimization</h5>
+                        <div class="panel-yellow radius" data-equalizer-watch="cosaFacciamo">
+                            <h5><i class="fa fa-google"></i> Seo - Search Engine Optimization</h5>
                             <hr>
                             <p class="small italic">
-                                Come faccio ad essere nella prima pagina nei risultati di ricerca di google? COme si diventa primi? Quanto costa?
+                                Come faccio ad essere nella prima pagina nei risultati di ricerca di google? Come si diventa primi? Quanto costa?
                             </p>
                             <p class="small">
                                 Nessuna magia, nessuna garanzia di prima pagina. Sappimao come fare in modo che google incizizzi il vostr sito, ma non
@@ -132,46 +143,48 @@ position: 0
                 </div>
                 <div class="row" data-equalizer="cosaFacciamo">
                     <div class="medium-6 columns" >
-                        <div class="panel radius" data-equalizer-watch="cosaFacciamo">
-                            <h5>Social media Marketing</h5>
+                        <div class="panel-yellow radius" data-equalizer-watch="cosaFacciamo">
+                            <h5><i class="fa fa-facebook"></i> Social media Marketing</h5>
                             <hr>
                             <p class="small italic">
                                 La mia fan page ha pochi fan, come faccio ad aumentarli? Devo esserci su FB, ci sono utti i miei competitor? Twitter, Pinterest, Instagram? Devo essereci?
                             </p>
                             <p class="small">
-                                Prima di tutto cerchiamo di capire dove sono i vostri potenziali clienti, quali bisongi hanno e come rispondergli. Poi vedremo se e quali social network presidiare!
+                                Capiamo dove sono i vostri potenziali clienti, quali bisongi hanno e come raccontargli la vostra azienda. I socialnetwork sono uno dei luoghi in cui le persone si trovano!
                             </p>
                         </div>
                     </div>
                     <div class="medium-6 columns" >
-                        <div class="panel radius" data-equalizer-watch="cosaFacciamo">
-                            <h5>Content Marketing</h5>
+                        <div class="panel-yellow radius" data-equalizer-watch="cosaFacciamo">
+                            <h5><i class="fa fa-pencil"></i> Content Marketing</h5>
                             <hr>
                             <p class="small italic">
                                 Devo avere un blog? Cosa scrivo? Quali contenuti postare sulla mia fan page? Che tono devo usare?
                             </p>
                             <p class="small">
                                 Prima di tutto conosciamo i tuoi clienti e i loro bisongi! Poi capiamo se possiamo dirgli qualcosa che li aiuti a capire che il vostro prodotto o bisogno li aiuteranno.
+                                Solo a questo punto è il momento di pensare a cosa scrivere, solo se ne vale la pena.
                             </p>
                         </div>
                     </div>
                 </div>
                 <div class="row" data-equalizer="cosaFacciamo">
                     <div class="medium-6 columns" >
-                        <div class="panel radius" data-equalizer-watch="cosaFacciamo">
-                            <h5>Siti Ecommerce</h5>
+                        <div class="panel-yellow radius" data-equalizer-watch="cosaFacciamo">
+                            <h5><i class="fa fa-bar-chart"></i> Web Analitycs</h5>
                             <hr>
                             <p class="small italic">
-                                Mi serve un sito di ecommerce, quanto costa? Devo sviluppare un sistema complesso per la gestione deim miei contenuti,quanto costa? Mi serve una landin page, quanto costa?
+                                Quanti visitatori ha il mio sito? La mia attività sta andando bene? Quali investimenti fare in futuro?
                             </p>
                             <p class="small">
-                                Incominciamo con il minimo indispensabile. Un sito di commercio elettronico non costa nulla. I cms sono gratis o quasi. Il resto ti serve veramente? Cerchiamo di capirlo e poi agiamo un passo alla volta!
+                                Ogni investimento deve essere attentamente valutato. I sisultati devono essere misurati e messi a disposizione di chi ha deciso e drovrà continuare a prendere delle decisoni.
+                                Basiamo il nostro lavoro sui numeri, sappiamo come interpretarli per raggiungere i vostri obiettivi.
                             </p>
                         </div>
                     </div>
                     <div class="medium-6 columns" >
-                        <div class="panel radius" data-equalizer-watch="cosaFacciamo">
-                            <h5>Sviluppo Software</h5>
+                        <div class="panel-yellow radius" data-equalizer-watch="cosaFacciamo">
+                            <h5><i class="fa fa-code"></i> Sviluppo Software - Ecommerce</h5>
                             <hr>
                             <p class="small italic">
                                 Devo sviluppare una APP, ve ne occupate? Crco un programmatore che mi aiuti ad integrare il mio CRM con il sito di Ecommerce e la campagna di Lead Generation, potete farlo?
@@ -188,157 +201,209 @@ position: 0
 
         <div class="row">
             <div class="large-12 columns">
-                <h2 id="titleIlMetodo" class="subheader">Il metodo</h2>
+                <h3 id="titleIlMetodo" class="subheader">Il metodo</h3>
                 <p>
                     <h5>
-                            Abbiamo sviluppato un <strong>metodo in 3 fasi</strong> che ci permette di essere veloci, efficienti ed efficaci. Nessuno spreco.<br />
+                            Applichiamo rigorosamente un <strong>metodo in 3 fasi</strong> che ci permette di essere veloci, efficienti ed efficaci. Nessuno spreco.<br />
                         </i>
                     </h5>
                 </p>
                 <hr>
                 <dl class="accordion" data-accordion>
                     <dd class="accordion-navigation">
-                        <a href="#fattibilita"><h3>1. Studio di Fattibilità e strategia</h3></a>
+                        <a href="#fattibilita"><h5>1. Studio di Fattibilità e strategia</i></h5></a>
                         <div id="fattibilita" class="content">
-                            <ul class="large-block-grid-1">
-                                <li class="panel">
-                                    <p><h4>Rispondiamo alle tue domande:</h4></p>
-                                    <ul>
-                                        <li>
-                                            Quale potenziale ritorno posso avere da questa campagna? Che fatturato posso attendermi?
-                                        </li>
-                                        <li>
-                                            Di quali strumenti devo dotarmi? Basta una landing Page? Devo dotarmi di un sito di commercio elettronico o per ora basta un mini sito?
-                                        </li>
-                                        <li>
-                                            Quali canali pubblicitari sono i più convenienti e quale budget allocare su ciascuno per poterne valutare l’effettiva efficacia? (Adwords? Rete dsiplay di Adwords? Retargeting? Facebook? Altri social network?)
-                                        </li>
-                                        <li>
-                                            Quale linguaggio usare, quali parole chiave usare con maggiore efficacia? Quali termini usano i miei clienti per descirvere il problema che intendo risolvere?
-                                        </li>
-                                        <li>
-                                            Chi sono i miei competir online? Cosa fanno? Quali canali presidiano e come?
-                                        </li>
-                                        <li>
-                                            Quali KPI (key performance indicator) monitorare e quali strumenti necessari per misurare gli obiettivi?
-                                            Ordini e costo di acquisizione ma quali altri numeri leggere per comprendere se stiamo procedendo nel modo corretto?
-                                        </li>
-
-                                    </ul>
-                                </li>
-                                <li>
-                                    <p>
+                            <div class="small-12 columns">
+                                <div class="row">
+                                    <div class="small-12 columns">
+                                        <p><h4>Alcune domande:</h4></p>
                                         <hr>
-                                        <h4>Come facciamo a dare queste risposte?</h4>
+                                        <ul>
+                                            <li>
+                                                Quale potenziale ritorno posso avere da questa campagna? Che fatturato posso attendermi?
+                                            </li>
+                                            <li>
+                                                Di quali strumenti devo dotarmi? Basta una landing Page? Devo dotarmi di un sito di commercio elettronico o per ora basta un mini sito?
+                                            </li>
+                                            <li>
+                                                Quali canali pubblicitari sono i più convenienti e quale budget allocare su ciascuno per poterne valutare l’effettiva efficacia? (Adwords? Rete dsiplay di Adwords? Retargeting? Facebook? Altri social network?)
+                                            </li>
+                                            <li>
+                                                Quale linguaggio usare, quali parole chiave usare con maggiore efficacia? Quali termini usano i miei clienti per descirvere il problema che intendo risolvere?
+                                            </li>
+                                            <li>
+                                                Chi sono i miei competir online? Cosa fanno? Quali canali presidiano e come?
+                                            </li>
+                                            <li>
+                                                Quali KPI (key performance indicator) monitorare e quali strumenti necessari per misurare gli obiettivi?
+                                                Ordini e costo di acquisizione ma quali altri numeri leggere per comprendere se stiamo procedendo nel modo corretto?
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="small-12 columns">
                                         <hr>
-                                    </p>
+                                        <h4>Come rispondiamo a queste domande?</h4>
+                                        <hr>
+                                        <div class="row metodo">
+                                            <div class="medium-4 columns">
+                                                <div class="panel-yellow radius">
+                                                    <h5>Studio delle persone</h5>
+                                                    A chi ci rivolgiamo?
+                                                    <hr>
+                                                    <p>
+                                                        Fondamentale per la riuscita di una campagna di marketing è conoscere le persone a
+                                                        cui comunicare. Delineare un profilo il più possibile dettagliato di queste persone
+                                                        è l’obiettivo di questo primo passo.
+                                                    </p>
+                                                    <p>
+                                                        <a href="#" data-reveal-id="studioPersone">Approfondisci!</a>
+                                                    </p>
 
-                                    <ul>
-                                        <li>
-                                            <h5 class="panel">Studio delle persone. A chi ci rivolgiamo?</h5>
-                                            <p>
-                                                Fondamentale per la riuscita di una campagna di marketing è conoscere le persone a
-                                                cui si sta “parlando”. Delineare un profilo il più possibile dettagliato di queste persone
-                                                è l’obiettivo di questo primo passo. Sarà il frutto di questo lavoro a guidarci nelle scelte
-                                                strategiche della campagna. Il punto focale a cui fare riferimento ogni qual volta che ci
-                                                saranno decisioni da prendere.
-                                            </p>
-                                        </li>
-                                        <li>
-                                            <h5 class="panel">Analisi del settore online. Come si muovono i competitor e chi sono?</h5>
-                                            <p>
-                                                Conosciamo la persona a cui parlare e i suoi bisogni. La domanda che ci faremo sarà:
-                                                chi altro online sta parlando a questa persona? Chi altro sta cercando di rispondere ai
-                                                suoi bisogni? Questo passo ci permetterà di sapere:
-                                                <ol>
-                                                    <li>
-                                                        Chi sono i potenziali competitor presenti online
-                                                    </li>
-                                                    <li>
-                                                        Quanto dovremo spendere indicativamente per essere incisivi online (meno competizione = meno spesa)
-                                                    </li>
-                                                    <li>
-                                                        Quali “luoghi” sono più requentati dalla persona a cui dobbiamo comunicare
-                                                    </li>
-                                                    <li>
-                                                        Chi sono i maggiori influenzatori nel settore
-                                                    </li>
-                                                    <li>
-                                                        Quali sono i canali di comunicazine più “convenienti”
-                                                    </li>
-                                                </ol>
-                                            </p>
-                                            <p>
-                                                Grazie a diversi strumenti del web, tra cui i motori di ricerca, i social network e le
-                                                piattaforme di web marketing siamo in grado di raggiungere un buon livello di
-                                                conoscenza del settore dei nostri clienti.
-                                            </p>
-                                        </li>
-                                        <li>
-                                            <h5 class="panel">Stesura della strategia. Cosa deve fare il nostro cliente?</h5>
-                                            <p>
-                                                Conosciamo la persona a cui dobbiamo parlare. Sappiamo cosa lo preoccupa, cosa lo
-                                                rassicura, quali sono i suoi bisogni.
-                                                Conosciamo il mercato online, sappiamo come comunicano i competitor, sappiamo
-                                                quali canali di comunicazione potremo usare con la maggiore convenienza.
-                                            </p>
-                                            <p>
-                                                Abbiamo una visione d’insieme che a questo punto ci permette di formulare alcune ipotesi su come potremmo procedere per raggiungere il nostro obiettivo.
-                                                E' il momento in cui si riponde a tutte le domande formulate precedentemente. alla fine di questo processo saperemo:
-                                            </p>
-                                            <ol>
-                                                <li>
-                                                    Quanto fatturato è plausibile che venga generato dalla campagna!
-                                                </li>
-                                                <li>
-                                                    Di quali strumenti dovrà dotarsi il nostro cliente
-                                                </li>
-                                                <li>
-                                                    Su quali canali pubblicitari sarà opportuno investire
-                                                </li>
-                                                <li>
-                                                    Quale linguaggio usare. Quali parole chiave sono più efficaci per i nostri potenziali clienti.
-                                                </li>
-                                                <li>
-                                                    Quali competior monitorare e quali influencers farci amici.
-                                                </li>
-                                                <li>
-                                                    Quali numeri tenere d'occhio per misurare la risucita della campagna (Key performance indicators)
-                                                </li>
-                                            </ol>
-                                        </li>
-                                    </ul>
+                                                    <div id="studioPersone" class="reveal-modal" data-reveal aria-labelledby="studioPersoneTitle" aria-hidden="true" role="dialog">
 
-                                </li>
-                            </ul>
+                                                        <h4 id="stesuraStrategiaTitle">Attraverso lo studio delle persone sapremo:</h4>
+                                                        <ol>
+                                                            <li>
+                                                                Quali sono i reali bisogni di queste persone!
+                                                            </li>
+                                                            <li>
+                                                                Cosa li rassicura, quali concetti sono importanti per loro!
+                                                            </li>
+                                                            <li>
+                                                                Dove si trovano online, cosa cercano, che luoghi frequentano
+                                                            </li>
+                                                            <li>
+                                                                Quale linguaggio usare. Quali parole chiave sono più efficaci per loro.
+                                                            </li>
+                                                        </ol>
+                                                        <p>
+                                                            Sarà il frutto di questo lavoro a guidarci nelle scelte
+                                                            strategiche della campagna. Il punto focale a cui fare riferimento ogni qual volta che ci
+                                                            saranno decisioni da prendere.
+                                                        </p>
+                                                        <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="medium-4 columns">
+                                                <div class="panel-yellow radius">
+                                                    <h5>Analisi del settore online</h5>
+                                                    Competitor e Influenzatori?
+                                                    <hr>
+                                                    <p>
+                                                        Conosciamo la persona a cui parlare e i suoi bisogni. La domanda che ci faremo sarà:
+                                                        chi altro online sta parlando a questa persona? Chi altro sta cercando di rispondere ai
+                                                        suoi bisogni?
+                                                    </p>
+                                                    <p>
+                                                        <a href="#" data-reveal-id="analisiCompetitor">Approfondisci!</a>
+                                                    </p>
+
+                                                    <div id="analisiCompetitor" class="reveal-modal" data-reveal aria-labelledby="analisiCompetitorTitle" aria-hidden="true" role="dialog">
+
+                                                        <h5 id="analisiCompetitorTitle">Attraverso l'analisi del settore online sapremo:</h5>
+                                                        <ol>
+                                                            <li>
+                                                                Chi sono i potenziali competitor presenti online
+                                                            </li>
+                                                            <li>
+                                                                Quanto dovremo spendere indicativamente per essere incisivi online (meno competizione = meno spesa)
+                                                            </li>
+                                                            <li>
+                                                                Quali “luoghi” sono più requentati dalla persona a cui dobbiamo comunicare
+                                                            </li>
+                                                            <li>
+                                                                Chi sono i maggiori influenzatori nel settore
+                                                            </li>
+                                                            <li>
+                                                                Quali sono i canali di comunicazine più “convenienti”
+                                                            </li>
+                                                        </ol>
+                                                        <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+                                                        <p>
+                                                            Grazie a diversi strumenti del web, tra cui i motori di ricerca, i social network e le
+                                                            piattaforme di web marketing siamo in grado di raggiungere un buon livello di
+                                                            conoscenza del settore dei nostri clienti.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="medium-4 columns">
+                                                <div class="panel-yellow radius">
+                                                    <h5>Stesura della strategia</h5>
+                                                    Cosa deve fare per essere efficaci?
+                                                    <hr>
+                                                    <p>
+                                                        Conoscendo persone e mercato di riferimento, sbbiamo una visione d’insieme
+                                                        che a questo punto ci permette di formulare alcune ipotesi su come potremmo procedere per raggiungere il nostro obiettivo.
+                                                    </p>
+                                                    <p>
+                                                        <a href="#" data-reveal-id="stesuraStrategia">Approfondisci!</a>
+                                                    </p>
+
+                                                    <div id="stesuraStrategia" class="reveal-modal" data-reveal aria-labelledby="stesuraStrategiaTitle" aria-hidden="true" role="dialog">
+
+                                                        <h4 id="stesuraStrategiaTitle">Dalineata la strategia sapremo:</h4>
+                                                        <ol>
+                                                            <li>
+                                                                Quanto fatturato è plausibile che venga generato dalla campagna!
+                                                            </li>
+                                                            <li>
+                                                                Di quali strumenti dovrà dotarsi il nostro cliente
+                                                            </li>
+                                                            <li>
+                                                                Su quali canali pubblicitari sarà opportuno investire
+                                                            </li>
+                                                            <li>
+                                                                Quale linguaggio usare. Quali parole chiave sono più efficaci per i nostri potenziali clienti.
+                                                            </li>
+                                                            <li>
+                                                                Quali competior monitorare e quali influencers farci amici.
+                                                            </li>
+                                                            <li>
+                                                                Quali numeri tenere d'occhio per misurare la risucita della campagna (Key performance indicators)
+                                                            </li>
+                                                        </ol>
+                                                        <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <p>
-                                <h4>
+                                <h6>
                                     <i>
                                         <strong>Spesso l’esito di questa fase di studio è quello di sconsigliare le campagne di web marketing al nostro cliente</strong>.
                                         Il web può anche rivelarsi come inefficace o troppo costoso per il settore del nostri cliente,
                                         tanto da sconsigliare anche una semplice fase di test.
                                     </i>
-                                <h4>
+                                <h6>
                             </p>
                         </div>
                     </dd>
-                    <p></p>
+                    <p />
                     <dd class="accordion-navigation">
                         <a href="#faseTest">
-                            <h3>2. Fase iniziale e avviamento progetto</h3>
+                            <h5>2. Test e avviamento progetto</h5>
                         </a>
                             <div id="faseTest" class="content">
                                 <ul class="large-block-grid-1">
-                                    <li class="panel">
+                                    <li>
                                         <p>
-                                            <h4>Rispondiamo alle tue domande:</h4>
+                                            <h4>Alcune domande:</h4>
+                                            <hr>
                                         </p>
                                         <ul>
                                             <li>
-                                                Qualcuno è realmnte interessato al mio prodotto o al mio servizio?
+                                                Qualcuno è interessato al mio prodotto o al mio servizio?
                                             </li>
                                             <li>
-                                                Quanto mi costa realmente ogni contatto commerciale? Quanto mi costerà acquisire ogni cliente?
+                                                Quanto mi costa ogni contatto commerciale? Quanto mi costerà acquisire ogni cliente?
                                             </li>
                                             <li>
                                                 Quali strumenti o canali pobblicitari danno i migliori risultati tra quelli individuati nella strategia iniziale?
@@ -355,27 +420,39 @@ position: 0
                                     <li>
                                         <p>
                                             <hr>
-                                            <h4>Come facciamo a dare queste risposte?</h4>
+                                            <h4>Come rispondiamo a queste domande?</h4>
                                             <hr>
                                         </p>
 
-                                        <ul>
+                                        <ul class="large-block-grid-2">
                                             <li>
-                                                <h5 class="panel">MVP - Minimum Viable Product</h5>
+                                                <div class="panel-yellow radius metodo">
+                                                <h5>MVP - Minimum Viable Product</h5>
+                                                Verifica delle idee e delle ipotesi il prima possibile!
+                                                <hr>
                                                 <p>
                                                     La strategia delineata nella fase 1 avrà indicato quali saranno gli strumenti minimi di cui dotarsi per verificare l’efficacia di una campagna di web marketing.
+                                                </p>
+
+                                                <p>
                                                     E’ importante testare il prima possibile la veridicità delle ipotesi formulate. Per questo la strategia si realizza sempre a piccoli passi e si procede gradualmente solo dopo averne
                                                     verificato l’efficacia con gli opportuni strumenti di misurazione.
+                                                </p>
+                                                <p>
 
                                                     Relizzeremo il minimo indispensabile per verificare le ipotesi formulate nella fase di studio.
                                                 </p>
+                                                </div>
                                             </li>
                                             <li>
-                                                <h5 class="panel">Un esempio di MVP</h5>
+                                                <div class="panel-yellow radius metodo">
+                                                <h5>Un esempio di MVP</h5>
+                                                Non serve quasi nulla per valutare un'idea!
+                                                <hr>
                                                 <p>
-                                                    Spesso non è necessario realizzare nulla se non una semplice Landig Page dove raccontare il proprio prodotto o servizio.
+                                                    <strong>Spesso basta un semplice Landig Page</strong> dove presentare il proprio prodotto o servizio.
                                                     Sarà sufficiente portare visitatori a questa pagina invitandoli a compiere una azione che manifesti la loro disponibilità all'acquisto.
-                                                    DI seguito gli elementi tipici di una fase di test:
+                                                    Di seguito gli elementi tipici di una fase di test:
                                                     <ol>
                                                         <li>
                                                             Realizzazione di una landing page o minisito
@@ -391,6 +468,7 @@ position: 0
                                                         </li>
                                                     </ol>
                                                 </p>
+                                                </div>
                                             </li>
 
                                         </ul>
@@ -398,60 +476,93 @@ position: 0
                                     </li>
                                 </ul>
                                 <p>
-                                    <h4>
+                                    <h6>
                                         <i>
-                                            Quanto realizzato in questa fase sarà il punto di partenza per gli sviluppi successivi.
+                                            Quanto realizzato in questa fase sarà il <strong>punto di partenza per gli sviluppi successivi</strong>.
                                             Sarete sorpresi dall'apprendere che gli sviluppi suggeriti dai dati reali saranno del tutto inaspettati.
                                         </i>
-                                    <h4>
+                                    <h6>
                                 </p>
                             </div>
                     </dd>
-                    <p></p>
+                    <p />
                     <dd class="accordion-navigation">
-                        <a href="#conversionOptimization"><h3>3. Messa a regime e sviluppo continuo -  Ottimizzazione delle conversioni (CRO)</h3></a>
+                        <a href="#conversionOptimization"><h5>3. Messa a regime e sviluppo continuo -  Conversion Optimization (CRO)</h5></a>
                         <div id="conversionOptimization" class="content">
                             <ul class="large-block-grid-1">
                                 <li>
+                                        <p>
+                                            <h4>Alcune domande:</h4>
+                                            <hr>
+                                        </p>
+                                        <ul>
+                                            <li>
+                                                Ok l'idea può funzionare, come procediamo ora, quali priorità?
+                                            </li>
+                                            <li>
+                                                Come posso ottimizzare quanto fatto fin'ora?
+                                            </li>
+                                            <li>
+                                                C'è spazio per aumentare il fatturato?
+                                            </li>
+                                            <li>
+                                                Quali nuovi servizi posso offrire ai miei clienti?
+                                            </li>
+
+                                        </ul>
+                                </li>
+                                <li>
                                     <p>
                                         <hr>
-                                            <h4>Ha inizio un processo di ottimizzazione costante organizzato in cicli. Ogni ciclo avrà durata massima di 3 mesi e avrà degli obiettivi definiti e misurabili.<br />
-                                            Ogni ciclo è composto da 4 fasi:
-                                            </h4>
+                                        <h4>Come rispondiamo a queste domande?</h4>
+                                        <hr>
+                                            <h6><strong>Attraverso un processo di ottimizzazione costante organizzato in cicli di 4 fasi</strong>. Ogni ciclo avrà durata massima di 3 mesi e avrà degli obiettivi definiti e misurabili.</h6>
                                         <hr>
                                     </p>
 
-                                    <ul>
+                                    <ul class="large-block-grid-2">
                                         <li>
-                                            <h5 class="panel">Ipotesi</h5>
-                                            <p>
-                                            Come possimao migliorare il rendimento della campagna? Cambiamo questa foto? Riscriviamo questo testo? Aggiungiamo questa importante funzionalità?
-                                            Si formulano delle ipotesi, si fanno dei ragionamenti e si studia a come poterli verificare sulla base di tempi e costi.
-                                            Si danno delle priorità...
-                                            </p>
+                                            <div class="panel-yellow radius metodo">
+                                                <h5>Ipotesi</h5>
+                                                <hr>
+                                                <p>
+                                                    Come possimao migliorare il rendimento della campagna? Cambiamo questa foto? Riscriviamo questo testo? Aggiungiamo questa importante funzionalità?
+                                                    Si formulano delle ipotesi, si fanno dei ragionamenti e si studia a come poterli verificare sulla base di tempi e costi.
+                                                    Si danno delle priorità...
+                                                </p>
+                                            </div>
                                         </li>
                                         <li>
-                                            <h5 class="panel">Realizzazione</h5>
-                                            <p>
-                                                E' il momento di realizzare quanto occorre per verificare le ipotesi della fase precedente.
-                                                Si realizzano le modifiche, si aggiorna il tesato, si modificano le immagini, si realizzano le nuove funzionalità.
-                                                Sulla base delle priorità si sceglie cosa realizzare in questa fase del ciclo.
-                                            </p>
+                                            <div class="panel-yellow radius metodo">
+                                                <h5>Realizzazione</h5>
+                                                <hr>
+                                                <p>
+                                                    E' il momento di realizzare quanto occorre per verificare le ipotesi della fase precedente.
+                                                    Si realizzano le modifiche, si aggiorna il tesato, si modificano le immagini, si realizzano le nuove funzionalità.
+                                                    Sulla base delle priorità si sceglie cosa realizzare in questa fase del ciclo.
+                                                </p>
+                                            </div>
                                         </li>
                                         <li>
-                                            <h5 class="panel">Misurazione</h5>
-                                            <p>
-                                                E' il momento in cui le novità vengono messe online e "girano". In questa fase si raccolgino dati, si misurano
-                                                i risultati sulla base di quelle KPI individuate e affinate nella fase preliminare e a seguito della orima fase di test.
-                                            </p>
+                                            <div class="panel-yellow radius metodo">
+                                                <h5>Misurazione</h5>
+                                                <hr>
+                                                <p>
+                                                    E' il momento in cui le novità vengono messe online e "girano". In questa fase si raccolgino dati, si misurano
+                                                    i risultati sulla base di quelle KPI individuate e affinate nella fase preliminare e a seguito della orima fase di test.
+                                                </p>
+                                            </div>
                                         </li>
                                         <li>
-                                            <h5 class="panel">Conclusioni</h5>
-                                            <p>
-                                                Abbiamo raccolto abbastanza dati per poter trarre delle clnclusioni. Le nostre ipotesi si sono rivelati corretti?
-                                                Cosa abbiamo imparato? Cos'aptro possiamo fare?
-                                                Si giunge cocsì a formulare nuove ipitesi e il ciclo riprende.
-                                            </p>
+                                            <div class="panel-yellow radius metodo">
+                                                <h5>Conclusioni</h5>
+                                                <hr>
+                                                <p>
+                                                    Abbiamo raccolto abbastanza dati per poter trarre delle clnclusioni. Le nostre ipotesi si sono rivelati corretti?
+                                                    Cosa abbiamo imparato? Cos'aptro possiamo fare?
+                                                    Si giunge cocsì a formulare nuove ipitesi e il ciclo riprende.
+                                                </p>
+                                            </div>
                                         </li>
 
 
@@ -459,46 +570,62 @@ position: 0
                                     <li>
                                     <p>
                                         <hr>
-                                        <h4>I vantaggi di questo approccio</h4>
+                                        <h4>I vantaggi del metodo "ciclico"</h4>
                                         <hr>
                                     </p>
 
-                                    <ul>
+                                    <ul class="large-block-grid-3">
                                         <li>
-                                            <h5 class="panel">Cicli di 3 mesi al massimo - Meglio 1 mese!</h5>
-                                            <p>
-                                                Il tempo massimo consigliato per ogni ciclo è di 3 mesi, anche se dipende da variabili come traffico generato, possibilità di raccogliere dati validi in tempi brevi, tempi di sviluppo ecc...
-                                                In caso di ipotesi errate si saranno spercati al massimo 3 mesi di lavoro
-                                                Non un intero progetto da buttare! Non anni di investimento... solo pochi mesi al massimo.
-                                            </p>
+                                            <div class="panel-yellow radius metodo">
+                                                <h5>Investimenti misurati</h5>
+                                                <hr>
+                                                <p>
+                                                    Il tempo massimo consigliato per ogni ciclo è di 3 mesi, anche se dipende da variabili come traffico generato, possibilità di raccogliere dati validi in tempi brevi, tempi di sviluppo ecc...
+                                                </p>
+                                                <p>
+                                                    In caso di ipotesi errate si saranno spercati al massimo 3 mesi di lavoro
+                                                    Non un intero progetto da buttare! Non anni di investimento. Solo pochi mesi!
+                                                </p>
+                                            </div>
                                         </li>
                                         <li>
-                                            <h5 class="panel">Elevata reattività ai cambiamenti</h5>
-                                            <p>
-                                                Lavorando in questo modo siamo liberi di reagire prontamente a novità e cambiamenti
-                                                che inevitabilmente si verificheranno nei settori dei nostri clienti.
-                                                Punti fermi saranno gli obiettivi di vendita, i la sostenibilità in temrini di costi e i desideri dei clienti.
-                                                il resto potrà cambiare di conseguenza!
-                                            </p>
+                                            <div class="panel-yellow radius metodo">
+                                                <h5>Agilità e velocità</h5>
+                                                <hr>
+                                                <p>
+                                                    Lavorando in questo modo siamo liberi di reagire prontamente a novità e cambiamenti
+                                                    che inevitabilmente si verificheranno nei settori dei nostri clienti.
+                                                </p>
+                                                <p>
+                                                    <strong>Punti fermi restano gli obiettivi di vendita, la sostenibilità in temrini di costi e i desideri dei clienti.</strong>
+                                                    Il resto potrà cambiare senza nessuna preclusione!
+                                                </p>
+                                            </div>
                                         </li>
                                         <li>
-                                            <h5 class="panel">Fuoco sull'essenziale, nessuna distrazione!</h5>
-                                            <p>
-                                                Procedendo in questo modo, il progetto rimane centrato sugli obiettiivi. Tutto ciò che non porta ad un miglioramento dell'obiettivo
-                                                non viene realizzato. Non decide il capo, o il guru dell'agenzia di turno, saranno i dati, i numeri a guidare lo sviluppo del progetto.
-                                            </p>
+                                            <div class="panel-yellow radius metodo">
+                                                <h5>Nessuna distrazione!</h5>
+                                                <hr>
+                                                <p>
+                                                    Procedendo in questo modo, il progetto rimane centrato sugli obiettiivi. Tutto ciò che non porta ad un miglioramento dell'obiettivo
+                                                    non viene realizzato.
+                                                </p>
+                                                <p>
+                                                    Non decide il capo, o il consulente dell'agenzia di turno, saranno i dati, i numeri a guidare lo sviluppo del progetto.
+                                                </p>
+                                            </div>
                                         </li>
                                     </ul>
 
                                 </li>
                             </ul>
                             <p>
-                                <h4>
+                                <h6>
                                     <i>
                                         Incomincia un lungo lavoro di ottimizzazione. Ipotesi, test, apprendimento, nuove ipotesi... tutto al fine di ottimizzare
                                         lo sforzo economico. <strong>Conversion Optimization (CRO), uno sviluppo continuo</strong>.
                                     </i>
-                                </h4>
+                                </h6>
                             </p>
                         </div>
                     </dd>
@@ -509,13 +636,18 @@ position: 0
 
         <div class="row">
             <div class="large-12 columns">
-                <h2 id="titleNoCompromessi" class="subheader">I principi fondamentali!</h2>
+                <h3 id="titleNoCompromessi" class="subheader">I principi fondamentali!</h3>
+                <p>
+                    <h5>
+                            Abbiamo dei principi che ispirano il nostro lavoro. <strong>Non scendiamo a compromessi</strong>.
+                    </h5>
+                </p>
                 <hr>
                 <ul class="large-block-grid-2">
                     <li>
                         <dl class="accordion" data-accordion>
                         <dd class="accordion-navigation">
-                            <a href="#vendite"><h3>Vendite, non esiste altro obiettivo!</h3></a>
+                            <a href="#vendite"><h5><i class="fa fa-eur"></i> Vendite, non esiste altro obiettivo!</h5></a>
                             <div id="vendite" class="content">
                                 <p>
                                     Le aziende per cui lavoriamo hanno sempre un solo obiettivo: <strong>VENDERE</strong>.
@@ -536,11 +668,11 @@ position: 0
                                     </ol>
                                 </p>
                                 <p>
-                                    <h4>
+                                    <h6>
                                         <i>
                                             Non ha senso parlare di engagement, contare i fan su Facebook o le visite ad un sito se nessuno compra quello che avete da vendere!
                                         </i>
-                                    </h4>
+                                    </h6>
                                 </p>
                             </div>
                         </dd>
@@ -549,7 +681,7 @@ position: 0
                     <li>
                         <dl class="accordion" data-accordion>
                         <dd class="accordion-navigation">
-                            <a href="#persone"><h3>Le persone al centro!</h3></a>
+                            <a href="#persone"><h5><i class="fa fa-users"></i> Le persone al centro!</h5></a>
                             <div id="persone" class="content">
                                 <p>
                                     <i>Come strutturo il mio sito web? Mi serve un sito di commercio elettronico? Basta una campagna di lead generation?
@@ -566,11 +698,11 @@ position: 0
                                     Conoscendo le persone a cui parlate saprete cosa dirgli, come dirlo, su che canali dirlo. Saprete dove sono, cosa fanno di cosa parlano ecc...
                                 </p>
                                 <p>
-                                    <h4>
+                                    <h6>
                                         <i>
                                             Parlare la lingua dei vostri clienti spiegando a loro, nei luoghi che frequentano, perchè il vostro prodotto è la soluzione ai loro problemi!
                                         </i>
-                                    </h4>
+                                    </h6>
                                 </p>
                             </div>
                         </dd>
@@ -579,7 +711,7 @@ position: 0
                     <li>
                         <dl class="accordion" data-accordion>
                         <dd class="accordion-navigation">
-                            <a href="#inumeri"><h3>I numeri! Il supporto alle decisioni</h3></a>
+                            <a href="#inumeri"><h5><i class="fa fa-line-chart"></i> I numeri! Il supporto alle decisioni</h5></a>
                             <div id="inumeri" class="content">
                                 <p>
                                     <i>Quale immagine è meglio scegliere? Quale banner è il migliore? Conviene spendere soldi su Facebook?
@@ -598,11 +730,11 @@ position: 0
                                     Quanto fatturo al mese grazie ai 4.000.000 di fans e quanto mi costano?
                                 </p>
                                 <p>
-                                    <h4>
+                                    <h6>
                                         <i>
                                             Guardiamo ai numeri! Quanti ordini avete ricevuto grazie alle nostre campagne e quanto vi sono costate. Questo è quello che vi diremo sempre!
                                         </i>
-                                    </h4>
+                                    </h6>
                                 </p>
                             </div>
                         </dd>
@@ -611,7 +743,7 @@ position: 0
                     <li>
                         <dl class="accordion" data-accordion>
                         <dd class="accordion-navigation">
-                            <a href="#seoSem"><h3>SEO, SEM, Social Network... Perché?</h3></a>
+                            <a href="#seoSem"><h5><i class="fa fa-share-alt"></i> SEO, SEM, Social Network... Perché?</h5></a>
                             <div id="seoSem" class="content">
                                 <p>
                                     <i>Vi occupate di SEO? Gestie campagne di Serach Engine Marketing (SEM)? Fate siti di commercio elettronico? Mi serve solo una landing page, le fate?
@@ -630,11 +762,11 @@ position: 0
                                     Il nostro obiettivo è farvi fatturare spendendo il meno possibile. Per questo noi vi diremo di non buttare soldi in inutili campagne, vi sconsiglieremo di buttarvi in imprese che non vi porteranno a nulla.
                                 </p>
                                 <p>
-                                    <h4>
+                                    <h6>
                                         <i>
                                             Vi sconsiglieremo di fare il lavoro che ci chiedete di fare. Vi diremo dei no... perchè quello che ci sta a cuore è il successo delle nostre attività, non i soldi che ci date per farle!
                                         </i>
-                                    </h4>
+                                    </h6>
                                 </p>
                             </div>
                         </dd>
@@ -643,7 +775,7 @@ position: 0
                     <li>
                         <dl class="accordion" data-accordion>
                         <dd class="accordion-navigation">
-                            <a href="#minimunViableProduct"><h3>MVP! Minimum viable product</h3></a>
+                            <a href="#minimunViableProduct"><h5><i class="fa fa-flask"></i> MVP! Minimum viable product</h5></a>
                             <div id="minimunViableProduct" class="content">
                                 <p>
                                     <i>Compreranno il mio prodotto? Riuscirò a vendere questo servizio? Qualcuno sarà mai interessato a quello che faccio? Non resta che provare, subito, adesso, senza perdere tempo.
@@ -658,11 +790,11 @@ position: 0
                                     Ci interessa i vostro successo, non il fatturato di un sito web!
                                 </p>
                                 <p>
-                                    <h4>
+                                    <h6>
                                         <i>
                                             Vi porteremo sempre a compiere il minimo passo indispensabile per migliorare i vostri risultati. Non serve correre, basta avere un buon passo!
                                         </i>
-                                    </h4>
+                                    </h6>
                                 </p>
                             </div>
                         </dd>
@@ -671,7 +803,7 @@ position: 0
                     <li>
                         <dl class="accordion" data-accordion>
                         <dd class="accordion-navigation">
-                            <a href="#ipotesiMisurazione"><h3>Ipotesi, Realizzazione, Misurazione!</h3></a>
+                            <a href="#ipotesiMisurazione"><h5><i class="fa fa-refresh"></i> Ipotesi, Realizzazione, Misurazione!</h5></a>
                             <div id="ipotesiMisurazione" class="content">
                                 <p>
                                     Insieme ai nostri clienti, formuliamo delle ipotesi, facciamo delle previsioni e prepariamo una strategia.
@@ -686,11 +818,11 @@ position: 0
                                     Dividamo il lavoro in cicli mensili o bimestrali. In questo modo abbiamo la possibilità di agire subito quando le ipotesi si dimostrano errate senza inutili sprechi di risorse.
                                 </p>
                                 <p>
-                                    <h4>
+                                    <h6>
                                         <i>Ipotesi, Realizzazione, Misurazione e ancora Ipotesi
                                             Nessuno spreco di risorese!
                                         </i>
-                                    </h4>
+                                    </h6>
                                 </p>
                             </div>
                         </dd>
@@ -700,82 +832,77 @@ position: 0
             </div>
         </div>
 
-         <div class="row">
-            <div class="large-12 columns">
-                <h2 class="subheader">Alcuni Esempi</h2>
-                <hr>
-               <div class="row">
-                  <div class="large-8 columns">
-                    <div class="panel radius">
-                        <div class="row">
-                           <div class="large-6 small-6 columns">
-                              <h4>Header</h4>
-                              <hr>
-                              <h5 class="subheader">Risus ligula, aliquam nec fermentum vitae, sollicitudin eget urna. Donec
-                                 dignissim nibh fermentum odio ornare sagittis.
-                              </h5>
-                              <div class="show-for-small" style="text-align: center">
-                                 <a class="small radius button" href="#">Call To Action!</a><br>
-                                 <a class="small radius button" href="#">Call To Action!</a>
-                              </div>
-                           </div>
-                           <div class="large-6 small-6 columns">
-                              <p>Suspendisse ultrices ornare tempor. Aenean eget ultricies libero. Phasellus non ipsum eros. Vivamus
-                                 at dignissim massa. Aenean dolor libero, blandit quis interdum et, malesuada nec ligula. Nullam erat
-                                 erat, eleifend sed pulvinar ac. Suspendisse ultrices ornare tempor. Aenean eget ultricies libero.
-                              </p>
-                           </div>
+         <div class="row panel-evidenza">
+            <div id="preventivi" class="large-12 columns">
+            <hr>
+                <div class="row">
+                    <div class="large-4 columns">
+                        <h3 class="subheader">Richiedi un preventivo Gratuito</h3>
+                        <hr>
+
+                        <div id="wufoo-m7p6q5">
+                        Fill out my <a href="http://fucinadeltag.wufoo.com/forms/m7p6q5">online form</a>.
                         </div>
-                     </div>
-                  </div>
-                  <div class="large-4 columns hide-for-small">
-                     <h4>Get In Touch!</h4>
-                     <hr>
-                     <a href="#">
-                        <div class="panel radius callout" style="text-align: center">
-                           <strong>Call To Action!</strong>
-                        </div>
-                     </a>
-                     <a href="#">
-                        <div class="panel radius callout" style="text-align: center">
-                           <strong>Call To Action!</strong>
-                        </div>
-                     </a>
-                  </div>
-               </div>
+                        <script type="text/javascript">var m7p6q5;(function(d, t) {
+                        var s = d.createElement(t), options = {
+                        'userName':'fucinadeltag',
+                        'formHash':'m7p6q5',
+                        'autoResize':true,
+                        'height':'701',
+                        'async':true,
+                        'header':'hide',
+                        'ssl':false};
+                        s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'wufoo.com/scripts/embed/form.js';
+                        s.onload = s.onreadystatechange = function() {
+                        var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return;
+                        try { m7p6q5 = new WufooForm();m7p6q5.initialize(options);m7p6q5.display(); } catch (e) {}};
+                        var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr);
+                        })(document, 'script');</script>
+
+                    </div>
+
+                    <div class="large-8 columns hide-for-small">
+                    <h3 class="subheader">Perchè scegliere Fucina del Tag</h3>
+                    <hr>
+                    <ul class="large-block-grid-1 vantaggi">
+                        <li>
+                            1. <strong>Lavoriamo per il successo delle nostre campagne</strong>, non per i soldi che ci date per farle!
+                        </li>
+                        <li>
+                            2. Se quello che volete da noi non vi porta successo, <strong>vi diciamo di NON farlo</strong>
+                        </li>
+                        <li>
+                            3. <strong>Curiamo internamente tutti gli aspetti</strong> di una campagna marketing
+                        </li>
+                        <li>
+                            4. <strong>Siamo incredibilmente agili</strong>. Programmatore, copy, art director, digital advertiser... abbiamo tutte le professionalità al nostro interno.
+                        </li>
+                        <li>
+                            5. <strong>Gestiamo tutta la filiera</strong>, dalla produzione della creatività, alla gestione dei canali pubblicitari, alla tecnologia. Il tutto per il vostro successo.
+                        </li>
+                        <li>
+                            6. <strong>Ci prendiamo le nostre responsabilità</strong>. Quando sbagliamo sappiamo ammetterlo e agire per rimediare.
+                        </li>
+                    </ul>
+
+                    </div>
+                </div>
             </div>
          </div>
          <footer class="row">
             <div class="large-12 columns">
                <hr>
                <div class="row">
-                  <div class="large-6 columns">
-                     <p>© Copyright no one at all. Go to town.</p>
-                  </div>
-                  <div class="large-6 columns">
-                     <ul class="inline-list right">
-                        <li>
-                           <a href="#">Link 1</a>
-                        </li>
-                        <li>
-                           <a href="#">Link 2</a>
-                        </li>
-                        <li>
-                           <a href="#">Link 3</a>
-                        </li>
-                        <li>
-                           <a href="#">Link 4</a>
-                        </li>
-                     </ul>
-                  </div>
+                    <div class="large-12 columns">
+                        <p>© 2013 Fucina del Tag - Via Ampère 61/A - P.Iva 03201900960</p>
+                    </div>
                </div>
             </div>
          </footer>
     {% endblock %}
     {{ 'vendor/jquery.min.js' | javascript_tag }}
     {{ 'foundation.min.js' | javascript_tag }}
-    {{ 'foundation/foundation.accordion.js' | javascript_tag }}
-    {{ 'foundation/foundation.equalizer.js' | javascript_tag }}
+    {{ 'foundation/foundation.orbit.js' | javascript_tag }}
     <!--
     {{ 'foundation.abide.js' | javascript_tag }}
     {{ 'foundation.accordion.js' | javascript_tag }}
