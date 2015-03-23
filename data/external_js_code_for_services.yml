@@ -1,1 +1,14 @@
---- []
+---
+- Codici JS:
+    _slug: codici-js
+    codice_prima_chiusura_head: ''
+    codice_dopo_apertura_body: "<script type=\"text/javascript\">\r\n\r\n      var
+      _gaq = _gaq || [];\r\n      _gaq.push(['_setAccount', 'UA-19846103-9']);\r\n
+      \     _gaq.push(['_trackPageview']);\r\n\r\n      setTimeout('_gaq.push([\\'_trackEvent\\',
+      \\'NoBounce\\', \\'Over 10 seconds\\'])',10000);\r\n\r\n      (function() {\r\n
+      \       var ga = document.createElement('script'); ga.type = 'text/javascript';
+      ga.async = true;\r\n        ga.src = ('https:' == document.location.protocol
+      ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';\r\n        var
+      s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga,
+      s);\r\n      })();\r\n\r\n</script>"
+    codice_prima_chiusura_body: ''

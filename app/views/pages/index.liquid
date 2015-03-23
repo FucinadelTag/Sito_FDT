@@ -6,7 +6,12 @@ published: true
 cache_strategy: none
 response_type: text/html
 position: 0
+seo_title: Fucina del Tag
 ---
+{% with_scope _slug: 'codici-js' %}
+    {% assign external_code = contents.external_js_code_for_services.first %}
+{% endwith_scope %}
+
 <!doctype html>
 <html class="no-js" lang="en">
   <head>
@@ -19,15 +24,21 @@ position: 0
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
     {% inline_editor %}
+
+    {{ external_code.codice_prima_chiusura_head }}
   </head>
   <body>
+  {{ external_code.codice_dopo_apertura_body }}
+
     {% block 'main' %}
         <div class="row">
             <div class="large-12 columns">
                <nav class="top-bar" data-topbar>
                     <ul class="title-area">
                         <li class="name">
-                            <h1><a href="/"> <img src="/images/logo_fucinadeltag_trasparente.png"></a></h1>
+                            <h1><a href="/">
+                            <img src="{{ 'logo_fucinadeltag_trasparente.png' | theme_image_url }}" alt="Fucina del Tag" />
+                            </a></h1>
                         </li>
                         <li class="toggle-topbar menu-icon">
                             <a href="/"><span>menu</span></a>
@@ -45,7 +56,7 @@ position: 0
                             </li>
                             <li class="divider"></li>
                             <li>
-                                <a href="#titleNoCompromessi">I principi!</a>
+                                <a href="#titleNoCompromessi">I principi</a>
                             </li>
                             <li class="divider"></li>
                             {% comment %}<li>
@@ -66,13 +77,19 @@ position: 0
                 <div>
                     <ul data-orbit data-options="pause_on_hover:false;timer:true;timer_speed:5000;bullets:false;slide_number:false;navigation_arrows:true;">
                         <li class="active">
-                            <img src="http://placehold.it/1200x400/FFFF00/000000&text=Web+Marketing+per+Vendere" title="slide 1" />
+                            <img src="http://placehold.it/1200x400/FFFF00/000000&text=Web+Marketing" title="Web Marketing" />
                         </li>
                         <li>
-                            <img src="http://placehold.it/1200x400/08E8DE/000000&text=Social+Media+Marketing" title="slide 2" />
+                            <img src="http://placehold.it/1200x400/08E8DE/000000&text=Social+Media+Marketing" title="Social media Marketing" />
                         </li>
                         <li>
-                            <img src="http://placehold.it/1200x400/00ff00/000000&text=SEO+e+Search+Engine+Marketing" title="slide 3" />
+                            <img src="http://placehold.it/1200x400/00ff00/000000&text=SEO+e+Search+Engine+Marketing" title="SEO" />
+                        </li>
+                        <li>
+                            <img src="http://placehold.it/1200x400/C0C0C0/000000&text=E-Commerce" title="E-Commerce" />
+                        </li>
+                        <li>
+                            <img src="http://placehold.it/1200x400/FF9900/000000&text=Sviluppo+Software" title="Sviluppo Software" />
                         </li>
                     </ul>
                 </div>
@@ -95,7 +112,7 @@ position: 0
                             <p class="small italic">Il mio prodotto è vendibile online? Come? quanto costa?
                             Cosa mi serve? Su quali media comunicare?</p>
                             <p class="small">
-                            Ti aiutiamo a capire e realizzare la giusta strategia per lo sviluppo del tuo buisness online.
+                            Vi aiutiamo a capire e realizzare la giusta strategia per lo sviluppo del vostro buisness online.
                             </p>
                         </div>
                     </div>
@@ -122,8 +139,7 @@ position: 0
                                 Vorrei che i miei banner comparissero su alcuni siti, è possibile? Fate campagne banner? Quanto costano?
                             </p>
                             <p class="small">
-                                Ci occupiamo di realizzare ed ottimizzare le vostre campagne di display advertising! Con un attenta gestione che passa dalla realizzazione dei banner fino alla pagina di atterraggio della vostra campagna.
-                                Ottimizziamo ogni aspetto della v0stra campagna.
+                                Ci occupiamo di realizzare ed ottimizzare le vostre campagne di display advertising! Con un attenta gestione che passa dalla realizazione dei banner fino alla pagina di atterraggio della vostra campagna.
                             </p>
                         </div>
                     </div>
@@ -135,8 +151,11 @@ position: 0
                                 Come faccio ad essere nella prima pagina nei risultati di ricerca di google? Come si diventa primi? Quanto costa?
                             </p>
                             <p class="small">
-                                Nessuna magia, nessuna garanzia di prima pagina. Sappimao come fare in modo che google incizizzi il vostr sito, ma non
-                                possimao garantirvi che diventerete i primi!
+                                Nessuna magia, nessuna garanzia di prima pagina. Sappiamo come fare in modo che google incizizzi il vostr sito, ma non
+                                possimao garantirvi mirabolanti risultati!
+                            </p>
+                            <p class="small">
+                                Il miglior modo di salire nelle posizioni di un motore di ricerca è smettere di preoccuparsene e realizzare qualcosa di veramente utile per le persone a cui vi rivolgete!
                             </p>
                         </div>
                     </div>
@@ -150,7 +169,11 @@ position: 0
                                 La mia fan page ha pochi fan, come faccio ad aumentarli? Devo esserci su FB, ci sono utti i miei competitor? Twitter, Pinterest, Instagram? Devo essereci?
                             </p>
                             <p class="small">
-                                Capiamo dove sono i vostri potenziali clienti, quali bisongi hanno e come raccontargli la vostra azienda. I socialnetwork sono uno dei luoghi in cui le persone si trovano!
+                                Crediamo che prima di tutto si debbano conoscere i propri potenziali clienti, sapere quali bisongi hanno e attraverso quali linguaggi parlare con loro.
+
+                            </p>
+                            <p class="small">
+                                I socialnetwork ci permettono di conversare quotidianamente con le persone che ci interessano, semplice e allo stesso tempo difficile.
                             </p>
                         </div>
                     </div>
@@ -162,8 +185,10 @@ position: 0
                                 Devo avere un blog? Cosa scrivo? Quali contenuti postare sulla mia fan page? Che tono devo usare?
                             </p>
                             <p class="small">
-                                Prima di tutto conosciamo i tuoi clienti e i loro bisongi! Poi capiamo se possiamo dirgli qualcosa che li aiuti a capire che il vostro prodotto o bisogno li aiuteranno.
-                                Solo a questo punto è il momento di pensare a cosa scrivere, solo se ne vale la pena.
+                                Vi aiutiamo ad individuare i temi importanti per le persone a cui vi rivolgete. Ci occupiamo di realizzare piani editoriali dettagliati con i contenuti piùadatti alle esigenze dei vostri clienti.
+                            </p>
+                            <p class="small">
+                                I contenuti devono essere interessanti e arricchire chi li legge. Se non si ha nulla da dire, meglio fare silenzio.
                             </p>
                         </div>
                     </div>
@@ -204,7 +229,7 @@ position: 0
                 <h3 id="titleIlMetodo" class="subheader">Il metodo</h3>
                 <p>
                     <h5>
-                            Applichiamo rigorosamente un <strong>metodo in 3 fasi</strong> che ci permette di essere veloci, efficienti ed efficaci. Nessuno spreco.<br />
+                            Applichiamo rigorosamente un <strong>metodo in 3 fasi</strong> che ci permette di essere <strong>veloci, efficienti ed efficaci</strong>.<br />
                         </i>
                     </h5>
                 </p>
@@ -479,7 +504,7 @@ position: 0
                                     <h6>
                                         <i>
                                             Quanto realizzato in questa fase sarà il <strong>punto di partenza per gli sviluppi successivi</strong>.
-                                            Sarete sorpresi dall'apprendere che gli sviluppi suggeriti dai dati reali saranno del tutto inaspettati.
+                                            Sarete sorpresi dall'apprendere che gli sviluppi suggeriti dai dati reali saranno del tutto diversi da quanto vi aspettavate.
                                         </i>
                                     <h6>
                                 </p>
@@ -754,7 +779,7 @@ position: 0
                                 </p>
 
                                 <p>
-                                    <strong>Nessuno vi dirà mai che per voi è inutile mettere in piedi un sito di commercio elettronico oggi. Nessuno vi dirà mai che una campagna SEM nel vostro settore è solo un bagno di sangue.</strong>
+                                    <strong>Nessuno vi dirà mai che per voi è inutile mettere in piedi un sito di commercio elettronico oggi. Nessuno vi dirà mai che una campagna SEM nel vostro settore è un costo enorme se non vi darà risultati.</strong>
                                     Nessuno vi dirà mai che senza i giusti contenuti è inutile che pensiate ad una presenza su Facebook. <strong>Nessuno vi dirà mai che quello che gli chiedete di fare è solo una perdita di tempo!</strong>
                                 </p>
 
@@ -764,7 +789,7 @@ position: 0
                                 <p>
                                     <h6>
                                         <i>
-                                            Vi sconsiglieremo di fare il lavoro che ci chiedete di fare. Vi diremo dei no... perchè quello che ci sta a cuore è il successo delle nostre attività, non i soldi che ci date per farle!
+                                            Vi <strong>sconsiglieremo</strong> di fare il lavoro che ci chiedete di fare. <strong>Vi diremo dei no</strong>... perchè quello che ci sta a cuore è la vostra soddisfazione, non i soldi che ci date!
                                         </i>
                                     </h6>
                                 </p>
@@ -778,21 +803,22 @@ position: 0
                             <a href="#minimunViableProduct"><h5><i class="fa fa-flask"></i> MVP! Minimum viable product</h5></a>
                             <div id="minimunViableProduct" class="content">
                                 <p>
-                                    <i>Compreranno il mio prodotto? Riuscirò a vendere questo servizio? Qualcuno sarà mai interessato a quello che faccio? Non resta che provare, subito, adesso, senza perdere tempo.
-                                    Se hai un'idea, la prima cosa da verificare è sen funziona.</i>
+                                    <i>Compreranno il mio prodotto? Riuscirò a vendere questo servizio? Qualcuno sarà mai interessato a quello che faccio? </i>
                                 </p>
                                 <p>
-                                    Il web permette di mettere subito alla prova un'idea di prodotto o servizio. Con pochi euro è possibile mettere alla prova le proprie ipotesi!
+                                    Non resta che provare, subito, adesso, senza perdere tempo.
+                                    Se hai un'idea, la prima cosa da verificare è sen funziona.
+                                    Con pochi euro è possibile mettere alla prova le proprie ipotesi!
                                 </p>
 
                                 <p>
-                                    Non vi diremo mai che vi serve un'astronave quando vi basta una bicicletta per verificare se la vostra idea di business ha senso.
-                                    Ci interessa i vostro successo, non il fatturato di un sito web!
+                                    <strong>Non vi diremo mai che vi serve un'astronave quando vi basta una bicicletta per verificare se la vostra idea di business ha senso.
+                                    Ci interessa che siate soddisfatti dei risultati, non vendervi un sito web!</strong>
                                 </p>
                                 <p>
                                     <h6>
                                         <i>
-                                            Vi porteremo sempre a compiere il minimo passo indispensabile per migliorare i vostri risultati. Non serve correre, basta avere un buon passo!
+                                            Vi porteremo sempre a compiere il minimo passo indispensabile per migliorare i vostri risultati senza inutili sprechi di soldi e tempo.
                                         </i>
                                     </h6>
                                 </p>
@@ -815,7 +841,7 @@ position: 0
                                     Siamo rapidi, veloci e pronti a cambiare. Sono i numeri a darci ragione o a darci torto, nessun orgoglio e nessuna presunzione!
                                 </p>
                                 <p>
-                                    Dividamo il lavoro in cicli mensili o bimestrali. In questo modo abbiamo la possibilità di agire subito quando le ipotesi si dimostrano errate senza inutili sprechi di risorse.
+                                    Dividamo il lavoro in cicli brevi e misurabili. In questo modo abbiamo la possibilità di agire subito quando le ipotesi si dimostrano errate senza inutili sprechi di risorse.
                                 </p>
                                 <p>
                                     <h6>
@@ -832,12 +858,14 @@ position: 0
             </div>
         </div>
 
-         <div class="row panel-evidenza">
+         <div class="row">
             <div id="preventivi" class="large-12 columns">
-            <hr>
+                <h3 id="titleNoCompromessi" class="subheader">Richiedi un preventivo gratuito e senza alcun impegno!</h3>
+                <hr>
                 <div class="row">
-                    <div class="large-4 columns">
-                        <h3 class="subheader">Richiedi un preventivo Gratuito</h3>
+                    <div class="medium-4 small-12 columns panel">
+                        <h5 class="subheader">Compila il form</h5>
+                        <i>Ti risponderemo entro poche ore!</i>
                         <hr>
 
                         <div id="wufoo-m7p6q5">
@@ -861,24 +889,24 @@ position: 0
 
                     </div>
 
-                    <div class="large-8 columns hide-for-small">
-                    <h3 class="subheader">Perchè scegliere Fucina del Tag</h3>
+                    <div class="medium-8 small-12 columns">
+                    <h4 class="subheader">Perchè scegliere Fucina del Tag</h4>
                     <hr>
-                    <ul class="large-block-grid-1 vantaggi">
+                    <ul class="large-block-grid-1">
                         <li>
-                            1. <strong>Lavoriamo per il successo delle nostre campagne</strong>, non per i soldi che ci date per farle!
+                            1. <strong>Lavoriamo per raggiungere VOSTRI obiettivi</strong>, non i NOSTRI!
                         </li>
                         <li>
-                            2. Se quello che volete da noi non vi porta successo, <strong>vi diciamo di NON farlo</strong>
+                            2. Se quello che volete da noi non vi porta risultati, <strong>vi consigliamo di NON farlo</strong>
                         </li>
                         <li>
                             3. <strong>Curiamo internamente tutti gli aspetti</strong> di una campagna marketing
                         </li>
                         <li>
-                            4. <strong>Siamo incredibilmente agili</strong>. Programmatore, copy, art director, digital advertiser... abbiamo tutte le professionalità al nostro interno.
+                            4. <strong>Siamo agili, veloci ed efficaci</strong>. Programmatore, copy, art director, digital advertiser... abbiamo tutte le professionalità al nostro interno.
                         </li>
                         <li>
-                            5. <strong>Gestiamo tutta la filiera</strong>, dalla produzione della creatività, alla gestione dei canali pubblicitari, alla tecnologia. Il tutto per il vostro successo.
+                            5. <strong>Non devi preoccuparti di gestire diersi fornitori. Gestiamo noi tutta la filiera</strong>, dalla produzione della creatività, alla gestione dei canali pubblicitari, alla tecnologia.
                         </li>
                         <li>
                             6. <strong>Ci prendiamo le nostre responsabilità</strong>. Quando sbagliamo sappiamo ammetterlo e agire per rimediare.
@@ -927,5 +955,7 @@ position: 0
                     }
     });
     </script>
+
+    {{ external_code.codice_prima_chiusura_body }}
   </body>
 </html>

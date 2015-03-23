@@ -13,24 +13,27 @@ fields:
     required: true
     unique: false
     localized: false
-- codice_prima_header:
-    label: Codice prima </header>
+- codice_prima_chiusura_head:
+    label: Codice prima chiusura head
     type: text
-    hint: Explanatory text displayed in the back office
+    hint: Codice da inserire prima della chiusuradel tag head  (</head>)
     required: false
     unique: false
     localized: false
-- body:
-    label: Codice dopo <body>
+    text_formatting: none
+- codice_dopo_apertura_body:
+    label: Codice dopo apertura body
     type: text
-    hint: Explanatory text displayed in the back office
+    hint: Codice appena dopo l'apertura del tag body (<body>)
     required: false
     unique: false
     localized: false
-- codice_prima_body:
-    label: Codice prima </body>
-    type: string
-    hint: Explanatory text displayed in the back office
+    text_formatting: none
+- codice_prima_chiusura_body:
+    label: Codice prima chiusura body
+    type: text
+    hint: Codice da inserie prima della chiusura del tag body (</body>)
     required: false
     unique: false
     localized: false
+    text_formatting: none

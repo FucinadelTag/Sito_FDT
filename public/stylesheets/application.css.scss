@@ -1,10 +1,10 @@
 @import url(http://fonts.googleapis.com/css?family=Titillium+Web:400,400italic,700,700italic,300,300italic);
 
-$baseYellow: #333333;
-$baseGreen: #333333;
-$baseBlue: #333333;
-$topbar-bg-color: darken($baseBlue, 2%);
-$accordion-navigation-color: darken($baseBlue, 2%);
+$baseYellow: #ffffff;
+$baseGreen: #00ff00;
+$baseBlue: #ffffff;
+$topbar-bg-color: darken($baseBlue, 80%);
+$accordion-navigation-color: darken($baseBlue, 10%);
 
 @import 'normalize';
 @import 'foundation/settings';
@@ -20,7 +20,7 @@ $accordion-navigation-color: darken($baseBlue, 2%);
 
 .accordion-navigation {
     h5 {
-        color: #FFFFFF;
+        color: #000000;
     }
 }
 
@@ -32,12 +32,13 @@ $accordion-navigation-color: darken($baseBlue, 2%);
   );
   h5 {
     font-style: italic;
+    font-weight: bold;
   }
 }
 
 .panel-evidenza {
   @include panel(
-    $bg: lighten($baseYellow, 70%),
+    $bg: lighten($baseBlue, 40%),
     $adjust:true
   );
   h5 {
@@ -59,6 +60,9 @@ $accordion-navigation-color: darken($baseBlue, 2%);
 }
 
 .vantaggi {
+  border-left: solid;
+  border-width: 1px;
+  border-color: scale-color($panel-bg, $lightness: $panel-function-factor);
   li {
     font-size: em-calc(17px);
   }
